@@ -1,6 +1,6 @@
 {
-  "name": "gym-crm",
-  "version": "0.0.1",
+  "name": "gym",
+  "version": "1.0.0",
   "dependencies": {
     "express": "~3.4.0",
     "mongoose": "~3.6.19"
