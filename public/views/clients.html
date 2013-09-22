@@ -4,10 +4,10 @@
             <th>ФИО</th>
             <th>Пол</th>
             <th>Возраст</th>
-            <td>^</td>
+            <td>Действия</td>
         </tr>
         <tr data-ng-repeat="client in clients">
-            <td><input data-ng-model="client.name"></td>
+            <td><inline-edit model="client.name" /></td>
             <td>{{client.sex}}</td>
             <td>{{client.age}}</td>
             <td><a data-ng-click="client.$save()">Сохранить</a></td>

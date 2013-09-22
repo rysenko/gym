@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('gym').controller('NavCtrl', function ($scope, $location) {
     $scope.links = {
         'clients': 'Клиенты'
