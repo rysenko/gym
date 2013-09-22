@@ -1,15 +1,15 @@
 'use strict';
 
 angular.module('gym').controller('ClientsCtrl', function ($scope, $resource) {
-    var clientsRead = $resource('/clients');
-    var clientsUpdate = $resource('/clients/:id', {id:'@id'}, {update: {method: 'PUT'}});
+    var resource = $resource('/clients/:_id', {_id:'@_id'});
 
-    $scope.client = clientsRead.query();
+    $scope.clients = resource.query();
     $scope.save = function (client) {
-        clientsUpdate.update({id: client.id}, client);
+        client.$save();
+        //resource.update({id: client.id}, client);
     };
     $scope.add = function() {
-        var newResource = new clientsUpdate($scope.newClient);
+        var newResource = new resource($scope.newClient);
         newResource.$save(function () {
             $scope.clients.push(newResource);
         });

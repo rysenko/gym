@@ -3,10 +3,14 @@
         <tr>
             <th>ФИО</th>
             <th>Пол</th>
-            <th>Телефон</th>
+            <th>Возраст</th>
+            <td>^</td>
         </tr>
         <tr data-ng-repeat="client in clients">
-            <td>rr</td>
+            <td><input data-ng-model="client.name"></td>
+            <td>{{client.sex}}</td>
+            <td>{{client.age}}</td>
+            <td><a data-ng-click="client.$save()">Сохранить</a></td>
         </tr>
     </table>
 </div>

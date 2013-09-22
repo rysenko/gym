@@ -30,7 +30,8 @@ module.exports = function (model) {
         })
     });
 
-    router.put('/:id', function (req, res, next) {
+    router.post('/:id', function (req, res, next) {
+        delete req.body._id;
         model.findByIdAndUpdate(req.params.id, req.body, null, function (err, doc) {
             if (err) {
                 next(err);
