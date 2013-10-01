@@ -1,4 +1,4 @@
-angular.module('gym', ['ngRoute', 'ngResource']).config(function ($routeProvider) {
+angular.module('gym', ['ngRoute', 'ngResource', 'ngGrid']).config(function ($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'views/main.html',

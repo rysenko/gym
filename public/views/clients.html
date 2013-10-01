@@ -1,16 +1,3 @@
 <div>
-    <table class="table table-bordered">
-        <tr>
-            <th>ФИО</th>
-            <th>Пол</th>
-            <th>Возраст</th>
-            <td>Действия</td>
-        </tr>
-        <tr data-ng-repeat="client in clients">
-            <td><inline-edit model="client.name" /></td>
-            <td>{{client.sex}}</td>
-            <td>{{client.age}}</td>
-            <td><a data-ng-click="client.$save()">Сохранить</a></td>
-        </tr>
-    </table>
+    <div class="gridStyle" data-ng-grid="gridOptions"></div>
 </div>
